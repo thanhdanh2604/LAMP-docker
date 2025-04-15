@@ -2,20 +2,19 @@ version: '3.8'
 
 services:
 
-  wordpress:
-    build:
-      context: ./config/php
-      dockerfile: Dockerfile
-    restart: always
+  nginx:
+    image: nginx:latest
     ports:
       - 8080:80
+    volumes:
+      - ./src:/usr/share/nginx/html
+      # - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: exampleuser
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: nhatansteel
-    volumes:
-      - ./src:/var/www/html
+
   db:
     image: mysql:8.0
     restart: always
