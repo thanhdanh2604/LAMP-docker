@@ -1,3 +1,6 @@
 [submodule "src/nhatansteel-src"]
 	path = src/nhatansteel-src
 	url = https://github.com/thanhdanh2604/nhatansteel-src
+[submodule "src/nhatansteel-fe"]
+	path = src/nhatansteel-fe
+	url = https://github.com/thanhdanh2604/nhatansteel-fe
