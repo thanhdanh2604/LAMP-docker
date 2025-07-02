@@ -6,6 +6,10 @@
 /src/wp-content/backups
 /src/wp-content/advanced-cache.php
 
+# Environment Files
+.env
+.env.local
+
 # Wordpress - ignore core, configuration, examples, uploads and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 

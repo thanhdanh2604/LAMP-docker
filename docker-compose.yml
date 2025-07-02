@@ -19,7 +19,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: passrootDanh123@
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./config/mysql:/etc/mysql/conf.d
       - ./data:/var/lib/mysql
