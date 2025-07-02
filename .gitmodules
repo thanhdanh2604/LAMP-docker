@@ -4,3 +4,6 @@
 [submodule "src/nhatansteel-fe"]
 	path = src/nhatansteel-fe
 	url = https://github.com/thanhdanh2604/nhatansteel-fe
+[submodule "src/propolife-webs"]
+	path = src/propolife-webs
+	url = git@github.com:fudosan-king/propolife-webs.git
