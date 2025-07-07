@@ -11,6 +11,11 @@ RUN apt-get update && apt-get install -y \
     zip \
     && docker-php-ext-install zip
 
+# Install Xdebug (compatible version for PHP 7.4)
+ARG PHP_VERSION
+RUN pecl install xdebug-3.1.6 \
+    && docker-php-ext-enable xdebug
+
 # Create session directory and set proper permissions
 RUN mkdir -p /tmp && chmod 1777 /tmp
 

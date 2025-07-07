@@ -33,9 +33,11 @@ wp-config.php
 # Example plugin
 /src/wp-content/plugins/hello.php
 
+.vscode
 
 # Log files
 *.log
+xdebug.log
 
 # htaccess
 /.htaccess
