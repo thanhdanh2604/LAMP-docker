@@ -1,0 +1,78 @@
+{
+    // === FOCUSED MODE: badminton-app ===
+    "files.exclude": {
+        "data": true,
+        "logs": true,
+        "src/nhatansteel-src": true,
+        "src/nhatansteel-fe": true,
+        "src/propolife-webs": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "search.exclude": {
+        "node_modules": true,
+        "vendor": true,
+        "data": true,
+        "logs": true,
+        "src/nhatansteel-src": true,
+        "src/nhatansteel-fe": true,
+        "src/propolife-webs": true,
+        "**/.git": true,
+        "**/*.min.js": true,
+        "**/*.min.css": true
+    },
+    "files.watcherExclude": {
+        "**/node_modules/**": true,
+        "**/vendor/**": true,
+        "**/data/**": true,
+        "**/logs/**": true,
+        "**/.git/**": true,
+        "src/nhatansteel-src/**": true,
+        "src/nhatansteel-fe/**": true,
+        "src/propolife-webs/**": true,
+        "**/storage/**": true,
+        "**/bootstrap/cache/**": true
+    },
+    
+    // === GIT OPTIMIZATION ===
+    "git.autoRepositoryDetection": "subFolders",
+    "git.scanRepositories": ["src/badminton-app"],
+    "git.ignoreLimitWarning": true,
+    
+    // === COPILOT OPTIMIZATION ===
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "github.copilot.advanced": {
+        "length": 500,
+        "temperature": 0.1,
+        "listCount": 3
+    },
+    
+    // === PERFORMANCE SETTINGS ===
+    "typescript.preferences.includePackageJsonAutoImports": "off",
+    "php.suggest.basic": false,
+    "extensions.autoUpdate": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "terminal.integrated.enableFileLinks": "off",
+    
+    // === FILE ASSOCIATIONS ===
+    "files.associations": {
+        "*.blade.php": "blade",
+        "*.php": "php",
+        "*.env*": "dotenv"
+    },
+    
+    // === EXPLORER OPTIMIZATIONS ===
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+        "composer.json": "composer.lock",
+        ".env": ".env.*"
+    }
+}

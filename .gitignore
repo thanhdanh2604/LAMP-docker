@@ -6,10 +6,6 @@
 /src/wp-content/backups
 /src/wp-content/advanced-cache.php
 
-# Environment Files
-.env
-.env.local
-
 # Wordpress - ignore core, configuration, examples, uploads and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
@@ -33,11 +29,9 @@ wp-config.php
 # Example plugin
 /src/wp-content/plugins/hello.php
 
-.vscode
 
 # Log files
 *.log
-xdebug.log
 
 # htaccess
 /.htaccess
@@ -53,3 +47,50 @@ xdebug.log
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
+
+# ========================================
+# PERFORMANCE OPTIMIZATION FOR SUBMODULES
+# ========================================
+
+# Exclude large directories from VS Code indexing
+src/*/node_modules/
+src/*/vendor/
+src/*/.git/
+src/*/storage/
+src/*/bootstrap/cache/
+src/*/public/storage
+src/*/public/hot
+
+# Large asset directories
+src/*/public/uploads/
+src/*/public/assets/
+src/*/dist/
+src/*/build/
+src/*/coverage/
+src/*/.next/
+src/*/.nuxt/
+
+# Framework cache directories
+src/*/storage/logs/
+src/*/storage/framework/cache/
+src/*/storage/framework/sessions/
+src/*/storage/framework/views/
+src/*/storage/app/livewire-tmp/
+
+# IDE and OS files in submodules
+src/*/.vscode/
+src/*/.idea/
+src/*/.DS_Store
+src/*/Thumbs.db
+
+# Package manager files
+src/*/package-lock.json
+src/*/yarn.lock
+src/*/composer.lock.bak
+
+# Development files
+src/*/.env.example.bak
+src/*/phpunit.xml.bak
+
+# VS Code workspace optimization
+.vscode/settings.json.backup
