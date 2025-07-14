@@ -14,8 +14,12 @@ RUN apt-get update && apt-get install -y \
     libonig-dev \
     && docker-php-ext-install zip xml curl mbstring tokenizer ctype bcmath
 
-# Install Xdebug
-RUN pecl install xdebug-3.1.6 || pecl upgrade xdebug \
+# Install Xdebug based on PHP version
+RUN if [ $(php -r "echo PHP_MAJOR_VERSION.PHP_MINOR_VERSION;") = "74" ]; then \
+        pecl install xdebug-3.0.4; \
+    else \
+        pecl install xdebug-3.1.6 || pecl upgrade xdebug; \
+    fi \
     && docker-php-ext-enable xdebug
 
 # Install Composer
