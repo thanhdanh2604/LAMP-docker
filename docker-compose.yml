@@ -27,7 +27,6 @@ services:
   lamp-mysql:
     image: mysql:8.0
     container_name: lamp-mysql-container
-    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
@@ -39,7 +38,6 @@ services:
   lamp-phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: lamp-phpmyadmin-container
-    restart: always
     ports:
       - 8081:80
     environment:
